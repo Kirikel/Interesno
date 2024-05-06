@@ -1,0 +1,36 @@
+.header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: 767px) {
+    gap: 10px;
+  }
+}
+
+.logo {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background-color: #101010;
+  border-radius: 10px;
+}
+
+.logoImage {
+  height: 60px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 28px;
+  letter-spacing: 8px;
+  color: #fff;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+}

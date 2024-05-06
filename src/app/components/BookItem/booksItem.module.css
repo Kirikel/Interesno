@@ -1,0 +1,74 @@
+.container {
+  width: 250px;
+  min-height: 200px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  padding: 15px 10px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.container:hover {
+  background-color: rgba(217, 217, 217, 0.1);
+  color: #fff;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.title {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 22px;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.title:after {
+  content: '';
+  transition: 1s;
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+}
+
+.container:hover .title:after {
+  width: 100%;
+  background: #fff;
+}
+
+.author {
+  font-size: 14px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.property {
+  font-size: 14px;
+}
+
+.removeBtn {
+  color: #fff;
+  background: #f00;
+  border: none;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
