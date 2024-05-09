@@ -48,7 +48,6 @@ export const fetchBooks = (
       {}
     );
 
-    //Sort by name
     Object.keys(booksSortedByYear).forEach((year) => {
       booksSortedByYear[year].sort((a, b) => a.name.localeCompare(b.name));
     });
