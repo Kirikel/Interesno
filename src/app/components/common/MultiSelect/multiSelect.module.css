@@ -1,0 +1,55 @@
+.multi-select-container {
+    position: relative;
+    width: 100%;
+}
+
+.multi-select-header {
+    cursor: pointer;
+    padding: 15px 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #000;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.multi-select-header-open{
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #000;
+}
+
+.activeArrow {
+    transform: rotate(180deg);
+}
+
+.multi-select-display {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+.multi-select-options {
+    position: absolute;
+    background: white;
+    width: 100%;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    color: #000;
+    border-radius: 0 0 8px 8px;
+    font-size: 14px;
+}
+
+.multi-select-option {
+    display: block;
+    padding: 8px;
+}
+
+.multi-select-checkbox {
+    margin-right: 10px;
+}

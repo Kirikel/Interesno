@@ -16,9 +16,9 @@ export const RecomededBook: FC<Props> = ({ book }) => {
         <h3 className={styles.name} title={book.name}>
           {book.name}
         </h3>
-        <p className={styles.author} title={book.author}>
-          Автор: {book.author}
-        </p>
+        <div className={styles.author}>
+          Автор{Number(book.author?.length) > 1 ? 'ы' : ''}: {book.author?.map(author => <p className={styles.authorItem}>{author}</p>)}
+        </div>
         <p className={styles.property}>
           Дата публикации:{' '}
           {book.date

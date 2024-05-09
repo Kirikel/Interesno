@@ -11,13 +11,13 @@ interface Props {
 
 export const BooksItem: FC<Props> = ({ book, deleteBook }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} title={book.name}>
       <NavLink to={`book/${book.id}`} className={styles.link}>
         <h3 className={styles.title} title={book.name}>
           {book.name}
         </h3>
-        <p className={styles.author} title={book.author}>
-          Автор: {book.author}
+        <p className={styles.author}>
+          Автор{Number(book.author?.length) > 1 ? 'ы' : ''}: {book.author?.map(author => <p className={styles.authorItem}>{author}</p>)}
         </p>
         <p className={styles.property}>
           Дата публикации:{' '}

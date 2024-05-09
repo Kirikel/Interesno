@@ -42,8 +42,8 @@ export const BookDetail: FC<Props> = ({ id }) => {
             <h2 className={styles.title} title={book?.name}>
               {book?.name}
             </h2>
-            <p className={styles.author} title={book?.author}>
-              Автор: {book?.author}
+            <p className={styles.author}>
+              Автор{Number(book?.author?.length) > 1 ? 'ы' : ''}: {book?.author?.map(author => <p className={styles.authorItem}>{author}</p>)}
             </p>
             <p className={styles.property}>
               Дата публикации:{' '}

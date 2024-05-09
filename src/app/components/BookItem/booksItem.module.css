@@ -50,11 +50,10 @@
 }
 
 .author {
-  font-size: 14px;
   width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
 }
 
 .property {

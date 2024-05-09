@@ -3,7 +3,7 @@ import { Timestamp } from '@firebase/firestore';
 export type BookItem = {
   id: string;
   name: string;
-  author: string;
+  author: string[];
   ISBN?: string;
   date?: Timestamp;
   rate: string;

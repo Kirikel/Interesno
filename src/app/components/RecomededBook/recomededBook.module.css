@@ -60,9 +60,12 @@
 .author {
   font-size: 14px;
   width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+}
+
+.authorItem {
+  font-size: 14px;
 }
 
 .property {

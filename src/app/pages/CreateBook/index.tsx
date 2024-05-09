@@ -5,7 +5,7 @@ import { BookItem } from '../../core/types';
 import { addBook } from '../../api';
 import { useNavigate } from 'react-router-dom';
 
-interface Props {}
+interface Props { }
 
 export const CreateBookPage: FC<Props> = () => {
   const navigate = useNavigate();

@@ -33,7 +33,6 @@ export const fetchBooks = (
       ...doc.data(),
       id: doc.id
     })) as BooksListResponse;
-
     const booksSortedByYear = books.reduce(
       (acc: BooksListGroupedByYear, book) => {
         const yearKey = book.date
@@ -48,6 +47,7 @@ export const fetchBooks = (
       {}
     );
 
+    //Sort by name
     Object.keys(booksSortedByYear).forEach((year) => {
       booksSortedByYear[year].sort((a, b) => a.name.localeCompare(b.name));
     });
@@ -101,12 +101,25 @@ export const fetchRecommendedBooks = async (
 };
 
 export const fetchBooksAuthors = async (
-  setAuthors: React.Dispatch<React.SetStateAction<BookAuthor[]>>
+  setAuthors: React.Dispatch<React.SetStateAction<{ name: string, value: string }[]>>
 ) => {
   onSnapshot(query(collection(db, AUTHORS_LIST)), (querySnapshot) => {
-    const authors = querySnapshot.docs.map((doc) => ({ ...doc.data() }));
-    setAuthors(authors as BookAuthor[]);
+    const authors = querySnapshot.docs.map((doc) => {
+      const data = doc.data();
+      return { ...data, value: data.name };
+    });
+    setAuthors(authors as { name: string, value: string }[]);
   });
+};
+
+export const addNewAuthor = async (name: string) => {
+  try {
+    const docRef = await addDoc(collection(db, AUTHORS_LIST), { name });
+    alert('Успешно добавлено');
+    return docRef;
+  } catch (e) {
+    console.error('Error adding book author: ', e);
+  }
 };
 
 export const addBook = async (data: Omit<BookItem, 'id'>) => {

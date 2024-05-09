@@ -26,6 +26,8 @@
 }
 
 .input {
+  font-family: inherit;
+  font-size: 14px;
   padding: 15px 10px;
   border-radius: 8px;
   outline: none;
@@ -48,4 +50,41 @@
 
 .submitBtn:hover {
   background-color: #000;
+}
+
+.authorsWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.authorsSelect {
+  max-width: 80%;
+}
+
+.authorsBtn { 
+  border-radius: 8px;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.authorForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.authorInput {
+  border: 1px solid #000;
+}
+
+.addNewAuthor {
+  padding: 15px 10px;
+  cursor: pointer;
+  background: #609ff1;
+  border-radius: 20px;
+  color: #fff;
+  transition: 0.3s;
+  border: none;
 }

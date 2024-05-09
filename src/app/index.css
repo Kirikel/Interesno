@@ -45,3 +45,7 @@ body {
   position: relative;
   white-space: pre-line;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
